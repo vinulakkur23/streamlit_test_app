@@ -48,8 +48,8 @@ openai_key = os.getenv('OPENAI_API_KEY')
 # opaikey = 'sk-proj-dIlb8btdHMAupYJMSXHuT3BlbkFJm3KYbZOLkJ43TXr9Pjep'
 # os.environ['OPENAI_API_KEY'] = opaikey
 
-embeddings = OpenAIEmbeddings()
-print(type(embeddings))
+# embeddings = OpenAIEmbeddings()
+# print(type(embeddings))
 
 model = ChatOpenAI()
 #
