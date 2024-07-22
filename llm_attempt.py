@@ -2,14 +2,12 @@
 
 import fitz  # PyMuPDF
 import re
-
-
 import os
 from langchain_openai import OpenAIEmbeddings
-from langchain.prompts import ChatPromptTemplate, MessagesPlaceholder
+from langchain.prompts import ChatPromptTemplate
 from langchain_openai import ChatOpenAI
 from langchain.schema import StrOutputParser
-
+from dotenv import load_dotenv
 
 
 # Mount Google Drive to access Colab storage
@@ -43,10 +41,12 @@ def preprocess_text(text):
 
 # full_text = extract_text_from_pdf(r'C:\Users\submi\PycharmProjects\Capstone_HomeworkHelpers\Preprocessing\Data\spelling_pb-grade-3.pdf')
 
+load_dotenv()
 
-os.environ['TAVILY_API_KEY'] = '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'
-opaikey = 'sk-proj-dIlb8btdHMAupYJMSXHuT3BlbkFJm3KYbZOLkJ43TXr9Pjep'
-os.environ['OPENAI_API_KEY'] = opaikey
+openai_key = os.getenv('OPENAI_API_KEY')
+# os.environ['TAVILY_API_KEY'] = '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'
+# opaikey = 'sk-proj-dIlb8btdHMAupYJMSXHuT3BlbkFJm3KYbZOLkJ43TXr9Pjep'
+# os.environ['OPENAI_API_KEY'] = opaikey
 
 embeddings = OpenAIEmbeddings()
 print(type(embeddings))

@@ -2,3 +2,5 @@ streamlit
 langchain_openai
 langchain.prompts
 langchain.schema
+python-dotenv
+PyMuPDF
