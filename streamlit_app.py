@@ -1,6 +1,6 @@
 
 import streamlit as st
-from llm_attempt import convert_homework
+from llm_attempt import convert_homework_simple
 
 st.set_page_config(
     page_title = "Homeworkhelpers",
@@ -14,5 +14,5 @@ input_style = st.text_area("Enter the style you would like to convert to (i.e. '
 input_text = st.text_area("Enter the Homework Problem")
 
 if st.button("Convert"):
-    converted_homework = convert_homework(input_style, input_text)
+    converted_homework = convert_homework_simple(input_style, input_text)
     st.success(converted_homework)
