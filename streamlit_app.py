@@ -1,6 +1,6 @@
 
 import streamlit as st
-from llm_attempt import convert_homework_simple
+from ExploratoryAnalysis_LLMs import convert_homework_simple
 
 st.set_page_config(
     page_title = "Homeworkhelpers",
@@ -8,10 +8,10 @@ st.set_page_config(
 )
 
 # streamlit page title
-st.title("Homework Helpers - Homework Converter")
+st.title("Homework Helpers - Textbook Translator")
 
 input_style = st.text_area("Enter the style you would like to convert to (i.e. 'sharks', 'pirates'):")
-input_text = st.text_area("Enter the Homework Problem")
+input_text = st.text_area("Enter the text you'd like to convert")
 
 if st.button("Convert"):
     converted_homework = convert_homework_simple(input_style, input_text)
